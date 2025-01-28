@@ -1,0 +1,59 @@
+{
+  "annotations": {
+    "changelogDate": "20250107181800"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vendorName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quoteDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "fileName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "country",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "browse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "NtQuoteVendorPo",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

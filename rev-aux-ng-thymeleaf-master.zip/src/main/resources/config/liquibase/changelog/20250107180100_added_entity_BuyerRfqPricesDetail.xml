@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity BuyerRfqPricesDetail.
+    -->
+    <changeSet id="20250107180100-1" author="jhipster">
+        <createTable tableName="buyer_rfq_prices_detail">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="sr_no" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="uid" type="${uuidType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="line" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="material_id" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            <column name="quantity" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="est_unit_price" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="act_unit_price" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="award_flag" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="quote_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="received_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="lead_days" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rank" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="split_quantity_flag" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="material_description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="last_updated" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="invite_ra_flag" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="award_acceptances_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="order_acceptances_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="order_acceptances_flag" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="material_name" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="material_image" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="technical_scrutiny_flag" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="vendor_attributes" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="margin_factor" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fob" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="shipping_factor" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="freight" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="final_shipment_cost" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tariff" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="calculated_tariffs_cost" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_cumberland_price" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="landed_price" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="approval_to_gain" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mold_size_mold_weight" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="mold_life_expectancy" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_cost_comparison" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="length" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="width" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="guage" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="tolerance" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="rfq_detail_id" type="bigint">
+                <constraints nullable="true" unique="true" uniqueConstraintName="ux_buyer_rfq_prices_detail__rfq_detail_id" />
+            </column>
+            <column name="vendor_id" type="bigint">
+                <constraints nullable="true" unique="true" uniqueConstraintName="ux_buyer_rfq_prices_detail__vendor_id" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="buyer_rfq_prices_detail" columnName="received_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="buyer_rfq_prices_detail" columnName="award_acceptances_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="buyer_rfq_prices_detail" columnName="order_acceptances_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20250107180100-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/buyer_rfq_prices_detail.csv"
+                  separator=";"
+                  tableName="buyer_rfq_prices_detail"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="sr_no" type="numeric"/>
+            <column name="uid" type="${uuidType}"/>
+            <column name="line" type="string"/>
+            <column name="material_id" type="string"/>
+            <column name="quantity" type="numeric"/>
+            <column name="est_unit_price" type="numeric"/>
+            <column name="act_unit_price" type="numeric"/>
+            <column name="award_flag" type="string"/>
+            <column name="quote_id" type="string"/>
+            <column name="received_date" type="date"/>
+            <column name="lead_days" type="numeric"/>
+            <column name="rank" type="string"/>
+            <column name="split_quantity_flag" type="numeric"/>
+            <column name="material_description" type="string"/>
+            <column name="last_updated" type="string"/>
+            <column name="invite_ra_flag" type="numeric"/>
+            <column name="award_acceptances_date" type="date"/>
+            <column name="order_acceptances_date" type="date"/>
+            <column name="order_acceptances_flag" type="numeric"/>
+            <column name="material_name" type="string"/>
+            <column name="material_image" type="string"/>
+            <column name="technical_scrutiny_flag" type="numeric"/>
+            <column name="vendor_attributes" type="string"/>
+            <column name="margin_factor" type="numeric"/>
+            <column name="fob" type="numeric"/>
+            <column name="shipping_factor" type="numeric"/>
+            <column name="freight" type="numeric"/>
+            <column name="final_shipment_cost" type="numeric"/>
+            <column name="tariff" type="numeric"/>
+            <column name="calculated_tariffs_cost" type="numeric"/>
+            <column name="total_cumberland_price" type="numeric"/>
+            <column name="landed_price" type="numeric"/>
+            <column name="approval_to_gain" type="numeric"/>
+            <column name="mold_size_mold_weight" type="string"/>
+            <column name="mold_life_expectancy" type="numeric"/>
+            <column name="total_cost_comparison" type="numeric"/>
+            <column name="length" type="string"/>
+            <column name="width" type="string"/>
+            <column name="guage" type="string"/>
+            <column name="tolerance" type="string"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

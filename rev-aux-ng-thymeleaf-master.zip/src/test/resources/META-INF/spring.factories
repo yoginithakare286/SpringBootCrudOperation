@@ -1,0 +1,4 @@
+org.springframework.test.context.ContextCustomizerFactory = com.yts.revaux.\
+    ntquote.config.SqlTestContainersSpringContextCustomizerFactory,com.yts.\
+    revaux.ntquote.config.TestContainersSpringContextCustomizerFactory,com.yts.\
+    revaux.ntquote.config.RedisTestContainersSpringContextCustomizerFactory

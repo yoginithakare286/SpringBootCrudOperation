@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20250107181200"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "NtQuoteComments",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

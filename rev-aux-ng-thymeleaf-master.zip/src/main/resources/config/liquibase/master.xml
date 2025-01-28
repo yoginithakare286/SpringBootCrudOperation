@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="floatType" value="float4" dbms="postgresql"/>
+    <property name="clobType" value="clob" dbms="postgresql"/>
+    <property name="blobType" value="blob" dbms="postgresql"/>
+    <property name="uuidType" value="uuid" dbms="postgresql"/>
+    <property name="datetimeType" value="datetime" dbms="postgresql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180000_added_entity_RfqDetail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180100_added_entity_BuyerRfqPricesDetail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180200_added_entity_VendorProfile.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180300_added_entity_NtQuote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180400_added_entity_NtQuoteCustomerProject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180500_added_entity_NtQuoteComponentDetail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180600_added_entity_NtQuoteProjectConsiderations.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180700_added_entity_NtQuoteContractReviewInformation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180800_added_entity_NtQuoteProjectApproval.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180900_added_entity_NtQuoteCustomerInputOutputMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181000_added_entity_NtQuoteCustomerInputOutputVersion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181100_added_entity_NtQuotePartInformationMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181200_added_entity_NtQuoteComments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181300_added_entity_NtQuoteTermsConditions.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181400_added_entity_NtProjectApproval.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181500_added_entity_NtQuotePartInformationVersion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181600_added_entity_NtQuoteCustomerPo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181700_added_entity_NtQuoteVendorQuote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181800_added_entity_NtQuoteVendorPo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181900_added_entity_PermissionMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107182000_added_entity_RevAuxUser.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20250107180100_added_entity_constraints_BuyerRfqPricesDetail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180300_added_entity_constraints_NtQuote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180400_added_entity_constraints_NtQuoteCustomerProject.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180500_added_entity_constraints_NtQuoteComponentDetail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180600_added_entity_constraints_NtQuoteProjectConsiderations.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107180700_added_entity_constraints_NtQuoteContractReviewInformation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181000_added_entity_constraints_NtQuoteCustomerInputOutputVersion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181100_added_entity_constraints_NtQuotePartInformationMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181200_added_entity_constraints_NtQuoteComments.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181300_added_entity_constraints_NtQuoteTermsConditions.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181400_added_entity_constraints_NtProjectApproval.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181500_added_entity_constraints_NtQuotePartInformationVersion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181600_added_entity_constraints_NtQuoteCustomerPo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181700_added_entity_constraints_NtQuoteVendorQuote.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181800_added_entity_constraints_NtQuoteVendorPo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107181900_added_entity_constraints_PermissionMaster.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250107182000_added_entity_constraints_RevAuxUser.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

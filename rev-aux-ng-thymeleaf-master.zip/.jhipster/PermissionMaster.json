@@ -1,0 +1,22 @@
+{
+  "annotations": {
+    "changelogDate": "20250107181900"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "permissionGroup",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "permission",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "PermissionMaster",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,84 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180200"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vendorId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "vendorName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contact",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "entryDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "tradeCurrencyId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mailId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rating",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDeleteFlag",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "relatedBuyerUid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "country",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "countryFlag",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "VendorProfile",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

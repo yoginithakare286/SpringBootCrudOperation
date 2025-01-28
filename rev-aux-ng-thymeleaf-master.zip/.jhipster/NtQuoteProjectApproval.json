@@ -1,0 +1,74 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180800"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "approvedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "approvalDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "programManager",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "engineering",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quality",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "materials",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "plantManager",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "NtQuoteProjectApproval",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "ntQuote",
+      "relationshipName": "ntQuote",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceClass"
+}

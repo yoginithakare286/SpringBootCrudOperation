@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head><base href="../../../"/>
+
+    <title>YT SOLUTIONS</title>
+
+    <meta charset="utf-8" />
+
+    <meta name="description" content="YT Solutions" />
+
+    <meta name="keywords" content="yt solutions" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta property="og:locale" content="en_US" />
+
+    <meta property="og:type" content="article" />
+
+    <meta property="og:title" content="YT Solutions" />
+
+    <meta property="og:url" content="https://www.google.com/" />
+
+    <meta property="og:site_name" content="YT SOLUTIONS" />
+
+    <link rel="canonical" href="https://www.google.com/" />
+
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+
+    <script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+
+</head>
+
+<body id="kt_body" class="app-blank">
+
+<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-bs-theme-mode")) { themeMode = document.documentElement.getAttribute("data-bs-theme-mode"); } else { if ( localStorage.getItem("data-bs-theme") !== null ) { themeMode = localStorage.getItem("data-bs-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-bs-theme", themeMode); }</script>
+
+<div class="d-flex flex-column flex-root" id="kt_app_root">
+
+    <div class="d-flex flex-column flex-lg-row flex-column-fluid">
+
+        <a href="../../demo1/dist/index.html" class="d-block d-lg-none mx-auto py-20">
+
+            <img style="width: 100px; height: 100px!important;" alt="Logo" src="assets/media/logos/yt_logo.png" class="theme-light-show h-25px" />
+
+            <img alt="Logo" src="assets/media/logos/yt_logo.png" class="theme-dark-show h-25px" />
+
+        </a>
+
+        <div class="d-none d-lg-flex flex-lg-row-fluid w-50 bgi-size-cover bgi-position-y-center bgi-position-x-start bgi-no-repeat" style="background-image: url(assets/media/auth/signin_ss.png)"></div>
+
+        <div class="d-flex flex-column flex-column-fluid flex-center w-lg-50 p-10">
+
+            <div class="d-flex justify-content-between flex-column-fluid flex-column w-100 mw-450px">
+
+                <div class="d-flex flex-stack py-2"></div>
+
+                <div class="py-20">
+
+                    <form id="loginForm" class="form w-100" novalidate="novalidate" data-kt-redirect-url="../../demo1/dist/index.html" action="#">
+
+                        <div class="text-center mb-20">
+
+                            <img style="width: 300px; height: 100px!important;" alt="Logo" src="assets/cubix_logo.png" class="theme-light-show h-25px" />
+
+                        </div>
+
+                        <div class="fv-row mb-8">
+
+                            <label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+
+                                <span class="">User Name</span>
+
+                            </label>
+
+                            <input type="text" id="username" class="form-control fs-4 py-4 text-gray-700 placeholder-gray-400 mw-500px" name="username" value="" />
+
+                        </div>
+
+                        <div class="fv-row mb-3">
+
+                            <label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+
+                                <span class="">Password</span>
+
+                            </label>
+
+                            <input type="password" id="password" class="form-control fs-4 py-4  text-gray-700 placeholder-gray-400 mw-500px" name="password" value="" />
+
+                        </div>
+
+                        <div class="d-flex flex-stack flex-wrap gap-3 fs-base fw-semibold mb-8">
+
+                            <div></div>
+
+                            <span >Forgot Password ?</span>
+
+                        </div>
+
+                        <div class="d-grid mb-10">
+
+                            <button type="submit" id="kt_sign_in_submit" class="btn btn-primary" style="background-color: #231D70">
+
+                                <span class="indicator-label">LOGIN</span>
+
+                                <span class="indicator-progress">Please wait...
+
+                                            <span class="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+                <div class="m-0">
+
+                    <button hidden class="btn btn-flex btn-link rotate" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start" data-kt-menu-offset="0px, 0px">
+
+                        <img data-kt-element="current-lang-flag" class="w-25px h-25px rounded-circle me-3" src="assets/media/flags/united-states.svg" alt="" />
+
+                        <span data-kt-element="current-lang-name" class="me-2">English</span>
+
+                        <i class="ki-duotone ki-down fs-2 text-muted rotate-180 m-0"></i>
+
+                    </button>
+
+                    <div hidden class="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-800 menu-state-bg-light-primary fw-semibold w-200px py-4" data-kt-menu="true" id="kt_auth_lang_menu">
+
+                        <div class="menu-item px-3">
+
+                            <a href="#" class="menu-link d-flex px-5" data-kt-lang="English">
+
+                                <span class="symbol symbol-20px me-4">
+
+                                    <img data-kt-element="lang-flag" class="rounded-1" src="assets/media/flags/united-states.svg" alt="" />
+
+                                </span>
+
+                                <span data-kt-element="lang-name">English</span>
+
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item px-3">
+
+                            <a href="#" class="menu-link d-flex px-5" data-kt-lang="Spanish">
+
+                                <span class="symbol symbol-20px me-4">
+
+                                    <img data-kt-element="lang-flag" class="rounded-1" src="assets/media/flags/spain.svg" alt="" />
+
+                                </span>
+
+                                <span data-kt-element="lang-name">Spanish</span>
+
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item px-3">
+
+                            <a href="#" class="menu-link d-flex px-5" data-kt-lang="German">
+
+                                <span class="symbol symbol-20px me-4">
+
+                                    <img data-kt-element="lang-flag" class="rounded-1" src="assets/media/flags/germany.svg" alt="" />
+
+                                </span>
+
+                                <span data-kt-element="lang-name">German</span>
+
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item px-3">
+
+                            <a href="#" class="menu-link d-flex px-5" data-kt-lang="Japanese">
+
+                                <span class="symbol symbol-20px me-4">
+
+                                    <img data-kt-element="lang-flag" class="rounded-1" src="assets/media/flags/japan.svg" alt="" />
+
+                                </span>
+
+                                <span data-kt-element="lang-name">Japanese</span>
+
+                            </a>
+
+                        </div>
+
+                        <div class="menu-item px-3">
+
+                            <a href="#" class="menu-link d-flex px-5" data-kt-lang="French">
+
+                                <span class="symbol symbol-20px me-4">
+
+                                    <img data-kt-element="lang-flag" class="rounded-1" src="assets/media/flags/france.svg" alt="" />
+
+                                </span>
+
+                                <span data-kt-element="lang-name">French</span>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- Add the provided script here -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+
+  $(document).ready(function () {
+
+    $.ajaxSetup({
+
+      beforeSend: function (xhr) {
+
+        const token = localStorage.getItem('token');
+
+        if (token) {
+
+          xhr.setRequestHeader('Authorization', token);
+
+        }
+
+      },
+
+    });
+
+    $('#loginForm').on('submit', function (e) {
+
+      e.preventDefault();
+
+
+
+      // Gather form data
+
+      const username = $('#username').val();
+
+      const password = $('#password').val();
+
+
+
+      // Make API call to authenticate
+
+      $.ajax({
+
+        url: '/api/authenticate',
+
+        type: 'POST',
+
+        contentType: 'application/json',
+
+        data: JSON.stringify({ username: username, password: password }),
+
+        success: function (response) {
+
+          // On success, redirect to the desired page (e.g., datatable)
+
+          localStorage.setItem('token', 'Bearer ' + `${response.id_token}`);
+
+          window.location.href = '/ntquoteui/ntquote';
+
+        },
+
+        error: function () {
+
+          // On error, display the error message
+
+          $('#error').show();
+
+        },
+
+      });
+
+    });
+
+  });
+
+</script>
+
+
+
+<script src="assets/plugins/global/plugins.bundle.js"></script>
+
+<script src="assets/js/scripts.bundle.js"></script>
+
+<script src="assets/js/custom/authentication/sign-in/general.js"></script>
+
+<script src="assets/js/custom/authentication/sign-in/i18n.js"></script>
+
+
+
+</body>
+
+</html>

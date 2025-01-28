@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180000"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "rfqId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "orderDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "startDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "itemDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rfqStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rfqType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rfqReceivedDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "quoteDueDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "part",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "buyer",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "expectedLaunch",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "requestor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "raStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isDelete",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "customerFeedback",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "RfqDetail",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity NtQuotePartInformationVersion.
+    -->
+    <changeSet id="20250107181500-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="nt_quote_id"
+                                 baseTableName="nt_quote_part_information_version"
+                                 constraintName="fk_nt_quote_part_information_version__nt_quote_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="nt_quote"
+                                 />
+    </changeSet>
+</databaseChangeLog>

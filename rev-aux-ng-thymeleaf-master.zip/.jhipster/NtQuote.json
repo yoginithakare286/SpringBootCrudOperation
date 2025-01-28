@@ -1,0 +1,177 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180300"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "quoteKey",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "salesPerson",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quoteNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "moldNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dueDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "moldManual",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerPo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vendorQuote",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vendorPo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cadFile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quotedPrice",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "deliveryTime",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quoteDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "NtQuote",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "ntQuoteProjectConsiderations",
+      "relationshipName": "projectConsiderations",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuoteContractReviewInformation",
+      "relationshipName": "contractReviewInformation",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuoteCustomerInputOutputVersion",
+      "relationshipName": "customerInputOutputVersion",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuotePartInformationMaster",
+      "relationshipName": "partInformationMaster",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuoteComments",
+      "relationshipName": "comments",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuoteTermsConditions",
+      "relationshipName": "termsConditions",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntProjectApproval",
+      "relationshipName": "projectApproval",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuotePartInformationVersion",
+      "relationshipName": "partInformationVersion",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuoteCustomerPo",
+      "relationshipName": "customerPo",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuoteVendorQuote",
+      "relationshipName": "vendorQuote",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "ntQuoteVendorPo",
+      "relationshipName": "vendorPo",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "rfqDetail",
+      "relationshipName": "rfqDetail",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

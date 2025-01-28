@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity NtQuoteCustomerInputOutputVersion.
+    -->
+    <changeSet id="20250107181000-1" author="jhipster">
+        <createTable tableName="nt_quote_customer_input_output_version">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="sr_no" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="uid" type="${uuidType}">
+                <constraints nullable="false" />
+            </column>
+            <column name="material_description" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="part_number" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="material_id" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="supplier" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="est_annual_volume" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="est_production_run_yrs" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="material_cost_lb" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="part_weight_lb" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="runner_weight_lb" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="machine_size" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="machine_rate" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="scrap_rate" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="machine_efficiency" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="fte" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="labor_rate" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="number_of_cavities" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="cycle_time" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="purchase_component_cost_part" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="secondary_operation_external_process" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="secondary_operation_labor_rate" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="secondary_operation_machine_rate" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="secondary_operation_cycle_time" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="external_operation_rate" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="preventative_maintenance_frequency" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="preventative_maintenance_cost" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="target_profit" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="target_material_markup" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="actual_material_cost" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="part_per_hours" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="est_lot_size" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="setup_hours" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="external_operation_cost_per" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="external_machine_cost_per" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="extended_labor_cost_per" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="extended_material_cost_per" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="pack_logistic_cost_per" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_production_cost" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_material_cost" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_cost_sga_profit" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="sga_rate" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="profit" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="part_price" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_cost" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_sales" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_profit" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="cost_material" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="total_contribution_margin" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="contribution_margin" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="material_contribution_margin" type="decimal(21,2)">
+                <constraints nullable="true" />
+            </column>
+            <column name="version" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="comments" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="created_by" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="created_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="updated_by" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="updated_date" type="${datetimeType}">
+                <constraints nullable="true" />
+            </column>
+            <column name="nt_quote_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+        <dropDefaultValue tableName="nt_quote_customer_input_output_version" columnName="created_date" columnDataType="${datetimeType}"/>
+        <dropDefaultValue tableName="nt_quote_customer_input_output_version" columnName="updated_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20250107181000-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/nt_quote_customer_input_output_version.csv"
+                  separator=";"
+                  tableName="nt_quote_customer_input_output_version"
+                  usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="sr_no" type="numeric"/>
+            <column name="uid" type="${uuidType}"/>
+            <column name="material_description" type="string"/>
+            <column name="part_number" type="string"/>
+            <column name="material_id" type="string"/>
+            <column name="supplier" type="string"/>
+            <column name="est_annual_volume" type="numeric"/>
+            <column name="est_production_run_yrs" type="numeric"/>
+            <column name="material_cost_lb" type="numeric"/>
+            <column name="part_weight_lb" type="numeric"/>
+            <column name="runner_weight_lb" type="numeric"/>
+            <column name="machine_size" type="string"/>
+            <column name="machine_rate" type="numeric"/>
+            <column name="scrap_rate" type="numeric"/>
+            <column name="machine_efficiency" type="numeric"/>
+            <column name="fte" type="string"/>
+            <column name="labor_rate" type="numeric"/>
+            <column name="number_of_cavities" type="numeric"/>
+            <column name="cycle_time" type="numeric"/>
+            <column name="purchase_component_cost_part" type="numeric"/>
+            <column name="secondary_operation_external_process" type="string"/>
+            <column name="secondary_operation_labor_rate" type="numeric"/>
+            <column name="secondary_operation_machine_rate" type="numeric"/>
+            <column name="secondary_operation_cycle_time" type="numeric"/>
+            <column name="external_operation_rate" type="numeric"/>
+            <column name="preventative_maintenance_frequency" type="numeric"/>
+            <column name="preventative_maintenance_cost" type="numeric"/>
+            <column name="target_profit" type="numeric"/>
+            <column name="target_material_markup" type="numeric"/>
+            <column name="actual_material_cost" type="numeric"/>
+            <column name="part_per_hours" type="numeric"/>
+            <column name="est_lot_size" type="numeric"/>
+            <column name="setup_hours" type="numeric"/>
+            <column name="external_operation_cost_per" type="numeric"/>
+            <column name="external_machine_cost_per" type="numeric"/>
+            <column name="extended_labor_cost_per" type="numeric"/>
+            <column name="extended_material_cost_per" type="numeric"/>
+            <column name="pack_logistic_cost_per" type="numeric"/>
+            <column name="total_production_cost" type="numeric"/>
+            <column name="total_material_cost" type="numeric"/>
+            <column name="total_cost_sga_profit" type="numeric"/>
+            <column name="sga_rate" type="numeric"/>
+            <column name="profit" type="numeric"/>
+            <column name="part_price" type="numeric"/>
+            <column name="total_cost" type="numeric"/>
+            <column name="total_sales" type="numeric"/>
+            <column name="total_profit" type="numeric"/>
+            <column name="cost_material" type="numeric"/>
+            <column name="total_contribution_margin" type="numeric"/>
+            <column name="contribution_margin" type="numeric"/>
+            <column name="material_contribution_margin" type="numeric"/>
+            <column name="version" type="numeric"/>
+            <column name="comments" type="string"/>
+            <column name="created_by" type="string"/>
+            <column name="created_date" type="date"/>
+            <column name="updated_by" type="string"/>
+            <column name="updated_date" type="date"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

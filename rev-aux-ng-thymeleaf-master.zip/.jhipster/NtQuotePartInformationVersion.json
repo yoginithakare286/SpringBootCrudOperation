@@ -1,0 +1,167 @@
+{
+  "annotations": {
+    "changelogDate": "20250107181500"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "materialDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cadFile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eau",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "partWeight",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "materialType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "materialCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "extendedMaterialCostPer",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "externalMachineCostPer",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "purchaseComponentCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "secondaryExternalOperationCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "overhead",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "packLogisticCostPer",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "machineSizeTons",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "numberOfCavities",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cycleTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "perUnit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalPricePerChina",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalPriceBudget",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "grainBudget",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "dogatingFixtureBudget",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "gaugeBudget",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "eoat",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "chinaTariffBudget",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalToolingBudget",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "leadTime",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "toolingNotes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "jobId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "moldId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quoteType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "NtQuotePartInformationVersion",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

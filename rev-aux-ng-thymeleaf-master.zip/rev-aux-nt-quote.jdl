@@ -1,0 +1,690 @@
+application {
+  config {
+    baseName RevAux,
+    applicationType monolith,
+    packageName com.yts.revaux.ntquote,
+    authenticationType jwt,
+    databaseType sql,
+    devDatabaseType postgresql,
+    prodDatabaseType postgresql,
+    buildTool maven,
+    cacheProvider redis,
+    enableHibernateCache true,
+    nativeLanguage en,
+    languages [en, fr, de],
+    enableSwaggerCodegen false,
+    enableTranslation true,
+    testFrameworks [cucumber],
+    skipClient true,
+    clientFramework react,
+    skipServer false,
+    reactive false,
+    withAdminUi true,
+    serverPort 8090,
+    searchEngine elasticsearch,
+    blueprints [],
+    websocket true,
+    dtoSuffix DTO,
+    searchEngine elasticsearch,
+    skipUserManagement false
+  }
+  entities *
+}
+entity RfqDetail {
+    srNo Integer,
+    uid UUID required
+    rfqId String,
+    orderDate LocalDate,
+    startDate LocalDate,
+    endDate LocalDate,
+    itemDescription String,
+    rfqStatus String,
+    rfqType String ,
+    customer String,
+    rfqReceivedDate LocalDate ,
+    quoteDueDate LocalDate,
+    part String,
+    buyer String,
+    expectedLaunch String,
+    requestor String,
+    raStatus String,
+    isDelete Integer,
+    customerFeedback String
+   }
+
+entity BuyerRfqPricesDetail {
+     srNo Integer,
+     uid UUID required,
+    // rfqId String,
+    line String,
+    materialId String required,
+    quantity Integer,
+    estUnitPrice BigDecimal,
+    // vendorId String,
+    actUnitPrice BigDecimal,
+    awardFlag String,
+    quoteId String ,
+    receivedDate ZonedDateTime,
+    leadDays BigDecimal,
+    rank String,
+    splitQuantityFlag Integer,
+    materialDescription String,
+    lastUpdated String,
+    inviteRaFlag Integer,
+    awardAcceptancesDate ZonedDateTime,
+    orderAcceptancesDate ZonedDateTime,
+    orderAcceptancesFlag Integer,
+    materialName String,
+    materialImage String,
+    technicalScrutinyFlag Integer,
+    vendorAttributes String,
+    marginFactor BigDecimal,
+    fob BigDecimal,
+    shippingFactor BigDecimal,
+    freight BigDecimal,
+    finalShipmentCost BigDecimal,
+    tariff BigDecimal,
+    calculatedTariffsCost BigDecimal,
+    totalCumberlandPrice BigDecimal,
+    landedPrice BigDecimal,
+    approvalToGain BigDecimal,
+    moldSizeMoldWeight String,
+    moldLifeExpectancy BigDecimal,
+    totalCostComparison BigDecimal,
+    length String,
+    width String,
+    guage String,
+    tolerance String
+}
+
+entity VendorProfile {
+    srNo Integer,
+    uid UUID required,
+    vendorId String required,
+    vendorName String,
+    contact String,
+    entryDate ZonedDateTime,
+    tradeCurrencyId String,
+    address1 String,
+    address2 String,
+    address3 String,
+    mailId String,
+    status String,
+    rating String,
+    isDeleteFlag Integer,
+    relatedBuyerUid String,
+    country String,
+    countryFlag String
+}
+
+entity NtQuote {
+    srNo Integer,
+    uid UUID required,
+    quoteKey String required,
+    salesPerson String,
+    customerName String,
+    quoteNumber String,
+    //rfqId String,
+    status String,
+    moldNumber String,
+    partNumber String,
+    dueDate LocalDate,
+    moldManual String,
+    customerPo String,
+    vendorQuote String,
+    vendorPo String,
+    cadFile String,
+    quotedPrice Integer,
+    deliveryTime String,
+    quoteDate LocalDate,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteCustomerProject {
+    srNo Integer,
+    uid UUID required,
+//    quoteKey Integer,
+    qsf String,
+    rev String,
+    date ZonedDateTime,
+    customerName String,
+    contactName String,
+    phone String,
+    email String,
+    overallProjectRiskEvaluation String,
+    assessmentDate ZonedDateTime,
+    reAssessmentDate ZonedDateTime,
+    projectName String,
+    projectInformation String,
+    projectManager String,
+    projectRequirement String,
+    lengthOfProject String,
+    newMold String,
+    transferMold String,
+    contactReviewDate LocalDate,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteComponentDetail {
+     srNo Integer,
+     uid UUID required,
+    materialDescription String,
+    partNumber String,
+//    quoteKey Integer,
+    eau Integer,
+//    materialId String,
+    manufacturingLocation String,
+    fobLocation String,
+    packingRequirements String,
+    machineSize String,
+    cycleTime Integer,
+    partWeight Integer,
+    runnerWeight Integer,
+    cavities Integer,
+    comments String,
+    riskLevel String,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteProjectConsiderations {
+     srNo Integer,
+    uid UUID required,
+    projectConsideration String,
+//    quoteKey Integer,
+    choice Integer
+    comments String,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteContractReviewInformation {
+      srNo Integer,
+     uid UUID required,
+    contractNumber String,
+    revision String,
+    reviewDate LocalDate,
+//    quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+
+entity NtQuoteProjectApproval {
+     srNo Integer,
+    uid UUID required,
+    approvedBy String,
+    approvalDate LocalDate,
+    programManager String,
+    engineering String,
+    quality String,
+    materials String,
+    plantManager String,
+//    quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteCustomerInputOutputMaster {
+    srNo Integer,
+    uid UUID required,
+    materialDescription String,
+    partNumber String,
+    materialId String,
+    supplier String,
+    estAnnualVolume Integer,
+    estProductionRunYrs Integer,
+    materialCostLb BigDecimal,
+    partWeightLb BigDecimal,
+    runnerWeightLb BigDecimal,
+    machineSize String,
+    machineRate BigDecimal,
+    scrapRate BigDecimal,
+    machineEfficiency BigDecimal,
+    fte String,
+    laborRate BigDecimal,
+    numberOfCavities Integer,
+    cycleTime Integer,
+    purchaseComponentCostPart BigDecimal,
+    secondaryOperationExternalProcess String,
+    secondaryOperationLaborRate BigDecimal,
+    secondaryOperationMachineRate BigDecimal,
+    secondaryOperationCycleTime Integer,
+    externalOperationRate BigDecimal,
+    preventativeMaintenanceFrequency Integer,
+    preventativeMaintenanceCost Integer,
+    targetProfit BigDecimal,
+    targetMaterialMarkup BigDecimal,
+    actualMaterialCost BigDecimal,
+    partPerHours BigDecimal,
+    estLotSize BigDecimal,
+    setupHours BigDecimal,
+    externalOperationCostPer BigDecimal,
+    externalMachineCostPer BigDecimal,
+    extendedLaborCostPer BigDecimal,
+    extendedMaterialCostPer BigDecimal,
+    packLogisticCostPer BigDecimal,
+    totalProductionCost BigDecimal,
+    totalMaterialCost BigDecimal,
+    totalCostSgaProfit BigDecimal,
+    sgaRate BigDecimal,
+    profit BigDecimal,
+    partPrice BigDecimal,
+    totalCost BigDecimal,
+    totalSales BigDecimal,
+    totalProfit BigDecimal,
+    costMaterial BigDecimal,
+    totalContributionMargin BigDecimal,
+    contributionMargin BigDecimal,
+    materialContributionMargin BigDecimal,
+    comments String,
+//    quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteCustomerInputOutputVersion {
+    srNo Integer,
+     uid UUID required,
+    materialDescription String,
+    partNumber String,
+    materialId String,
+    supplier String,
+    estAnnualVolume Integer,
+    estProductionRunYrs Integer,
+    materialCostLb BigDecimal,
+    partWeightLb BigDecimal,
+    runnerWeightLb BigDecimal,
+    machineSize String,
+    machineRate BigDecimal,
+    scrapRate BigDecimal,
+    machineEfficiency BigDecimal,
+    fte String,
+    laborRate BigDecimal,
+    numberOfCavities Integer,
+    cycleTime Integer,
+    purchaseComponentCostPart BigDecimal,
+    secondaryOperationExternalProcess String,
+    secondaryOperationLaborRate BigDecimal,
+    secondaryOperationMachineRate BigDecimal,
+    secondaryOperationCycleTime Integer,
+    externalOperationRate BigDecimal,
+    preventativeMaintenanceFrequency Integer,
+    preventativeMaintenanceCost Integer,
+    targetProfit BigDecimal,
+    targetMaterialMarkup BigDecimal,
+    actualMaterialCost BigDecimal,
+    partPerHours BigDecimal,
+    estLotSize BigDecimal,
+    setupHours BigDecimal,
+    externalOperationCostPer BigDecimal,
+    externalMachineCostPer BigDecimal,
+    extendedLaborCostPer BigDecimal,
+    extendedMaterialCostPer BigDecimal,
+    packLogisticCostPer BigDecimal,
+    totalProductionCost BigDecimal,
+    totalMaterialCost BigDecimal,
+    totalCostSgaProfit BigDecimal,
+    sgaRate BigDecimal,
+    profit BigDecimal,
+    partPrice BigDecimal,
+    totalCost BigDecimal,
+    totalSales BigDecimal,
+    totalProfit BigDecimal,
+    costMaterial BigDecimal,
+    totalContributionMargin BigDecimal,
+    contributionMargin BigDecimal,
+    materialContributionMargin BigDecimal,
+//    quoteKey Integer,
+    version Integer,
+    comments String,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuotePartInformationMaster {
+    srNo Integer,
+     uid UUID required,
+    materialDescription String,
+    partNumber String,
+    cadFile String,
+    eau Integer,
+    partWeight Integer,
+    materialType String,
+    materialCost BigDecimal,
+    extendedMaterialCostPer BigDecimal,
+    externalMachineCostPer BigDecimal,
+    purchaseComponentCost BigDecimal,
+    secondaryExternalOperationCost BigDecimal,
+    overhead BigDecimal,
+    packLogisticCostPer BigDecimal,
+    machineSizeTons String,
+    numberOfCavities Integer,
+    cycleTime Integer,
+    perUnit BigDecimal,
+    totalPricePerChina BigDecimal,
+    totalPriceBudget BigDecimal,
+    grainBudget BigDecimal,
+    dogatingFixtureBudget BigDecimal,
+    gaugeBudget BigDecimal,
+    eoat BigDecimal,
+    chinaTariffBudget BigDecimal,
+    totalToolingBudget BigDecimal,
+    leadTime String,
+    toolingNotes String,
+    partDescription String,
+    jobId String,
+    moldId String,
+//    quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteComments {
+    srNo Integer ,
+    uid UUID required,
+    comments String,
+    //  quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteTermsConditions {
+    srNo Integer,
+    uid UUID required,
+    termsConditions String,
+    //  quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtProjectApproval {
+    srNo Integer ,
+    uid UUID required,
+    approvedBy String,
+    approvalDate LocalDate,
+    //  quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuotePartInformationVersion {
+    srNo Integer,
+     uid UUID required,
+    materialDescription String,
+    partNumber String,
+    cadFile String,
+    eau Integer,
+    partWeight Integer,
+    materialType String,
+    materialCost BigDecimal,
+    extendedMaterialCostPer BigDecimal,
+    externalMachineCostPer BigDecimal,
+    purchaseComponentCost BigDecimal,
+    secondaryExternalOperationCost BigDecimal,
+    overhead BigDecimal,
+    packLogisticCostPer BigDecimal,
+    machineSizeTons String,
+    numberOfCavities Integer,
+    cycleTime Integer,
+    perUnit BigDecimal,
+    totalPricePerChina BigDecimal,
+    totalPriceBudget BigDecimal,
+    grainBudget BigDecimal,
+    dogatingFixtureBudget BigDecimal,
+    gaugeBudget BigDecimal,
+    eoat BigDecimal,
+    chinaTariffBudget BigDecimal,
+    totalToolingBudget BigDecimal,
+    leadTime String,
+    toolingNotes String,
+    partDescription String,
+    jobId String,
+    moldId String,
+    quoteType String,
+    comments String,
+    //  quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteCustomerPo {
+    srNo Integer,
+    uid UUID required,
+    customerName String,
+    quoteDate LocalDate,
+    fileName String,
+    country String,
+    browse String,
+    //  quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteVendorQuote {
+    srNo Integer,
+    uid UUID required,
+    vendorName String,
+    quoteDate LocalDate,
+    fileName String,
+    country String,
+    browse String,
+    //  quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+entity NtQuoteVendorPo {
+    srNo Integer,
+    uid UUID required,
+    vendorName String,
+    quoteDate LocalDate,
+    fileName String,
+    country String,
+    browse String,
+    //  quoteKey Integer,
+    createdBy String,
+    createdDate Instant,
+    updatedBy String,
+    updatedDate Instant
+}
+
+relationship OneToOne {
+    BuyerRfqPricesDetail{rfqDetail} to RfqDetail
+    BuyerRfqPricesDetail{vendor} to VendorProfile
+}
+
+relationship ManyToOne {
+    NtQuote{rfqDetail} to RfqDetail
+}
+
+relationship ManyToOne {
+    NtQuoteCustomerProject{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteComponentDetail{ntQuote} to NtQuote,
+    NtQuoteComponentDetail{materialPrice} to BuyerRfqPricesDetail
+}
+
+/*
+Incorrect many to one relationship
+
+relationship ManyToOne {
+    NtQuoteProjectConsiderations{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteContractReviewInformation{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteProjectApproval{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteCustomerInputOutputMaster{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteCustomerInputOutputVersion{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuotePartInformationMaster{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteComments{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteTermsConditions{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtProjectApproval{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuotePartInformationVersion{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteCustomerPo{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteVendorQuote{ntQuote} to NtQuote
+}
+
+relationship ManyToOne {
+    NtQuoteVendorPo{ntQuote} to NtQuote
+}
+*/
+
+relationship OneToMany {
+    NtQuote{projectConsiderations} to NtQuoteProjectConsiderations
+}
+
+relationship OneToMany {
+    NtQuote {contractReviewInformation} to NtQuoteContractReviewInformation
+}
+
+relationship OneToMany {
+    NtQuoteProjectApproval{ntQuote} to NtQuote
+}
+
+/*
+relationship with master will not be required.
+relationship OneToMany {
+    NtQuote{customerInputOutputMaster} to NtQuoteCustomerInputOutputMaster
+}
+*/
+
+relationship OneToMany {
+    NtQuote{customerInputOutputVersion} to NtQuoteCustomerInputOutputVersion
+}
+
+// check if this is valid relationship.
+relationship OneToMany {
+    NtQuote{partInformationMaster} to NtQuotePartInformationMaster
+}
+
+relationship OneToMany {
+    NtQuote{comments} to NtQuoteComments
+}
+
+relationship OneToMany {
+    NtQuote {termsConditions} to NtQuoteTermsConditions
+}
+
+relationship OneToMany {
+    NtQuote{projectApproval} to NtProjectApproval
+}
+
+relationship OneToMany {
+    NtQuote{partInformationVersion} to NtQuotePartInformationVersion
+}
+
+relationship OneToMany {
+    NtQuote{customerPo} to NtQuoteCustomerPo
+}
+
+relationship OneToMany {
+    NtQuote{VendorQuote} to NtQuoteVendorQuote
+}
+
+relationship OneToMany {
+    NtQuote{vendorPo} to NtQuoteVendorPo
+}
+
+entity PermissionMaster{
+   permissionGroup String 
+   permission String 
+}
+
+entity RevAuxUser {
+  phoneNumber String,
+  pincode String,
+  city String,
+  state String,
+  country String,
+  preferredLanguage String
+}
+
+relationship OneToOne {
+  RevAuxUser{internalUser(login)} to @OnDelete("CASCADE") @Id User with builtInEntity
+}
+
+relationship OneToMany {
+    RevAuxUser {permissions} to PermissionMaster
+}
+
+
+filter * except NtQuoteTermsConditions, NtQuoteComments, NtQuoteCustomerInputOutputMaster
+paginate * with pagination
+dto * with mapstruct
+service * with serviceClass
+
+
+
+
+
+
+
+
+
+

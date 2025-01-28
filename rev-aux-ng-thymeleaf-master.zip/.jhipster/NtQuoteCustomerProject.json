@@ -1,0 +1,118 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180400"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "qsf",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rev",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phone",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "overallProjectRiskEvaluation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "assessmentDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "reAssessmentDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "projectName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "projectInformation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "projectManager",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "projectRequirement",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lengthOfProject",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "newMold",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "transferMold",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactReviewDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "NtQuoteCustomerProject",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "ntQuote",
+      "relationshipName": "ntQuote",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

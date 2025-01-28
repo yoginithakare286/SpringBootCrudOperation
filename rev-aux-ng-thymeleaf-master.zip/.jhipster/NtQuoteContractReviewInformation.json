@@ -1,0 +1,51 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180700"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "contractNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "revision",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reviewDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "NtQuoteContractReviewInformation",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

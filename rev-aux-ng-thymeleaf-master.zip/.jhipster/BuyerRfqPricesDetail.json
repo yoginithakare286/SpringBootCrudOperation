@@ -1,0 +1,189 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180100"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "line",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "materialId",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "quantity",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "estUnitPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "actUnitPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "awardFlag",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "quoteId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "receivedDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "leadDays",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "rank",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "splitQuantityFlag",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "materialDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastUpdated",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "inviteRaFlag",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "awardAcceptancesDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "orderAcceptancesDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "orderAcceptancesFlag",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "materialName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "materialImage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "technicalScrutinyFlag",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "vendorAttributes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "marginFactor",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "fob",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "shippingFactor",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "freight",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "finalShipmentCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "tariff",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "calculatedTariffsCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalCumberlandPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "landedPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "approvalToGain",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "moldSizeMoldWeight",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "moldLifeExpectancy",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalCostComparison",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "length",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "width",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "guage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tolerance",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "BuyerRfqPricesDetail",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "rfqDetail",
+      "relationshipName": "rfqDetail",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "vendorProfile",
+      "relationshipName": "vendor",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

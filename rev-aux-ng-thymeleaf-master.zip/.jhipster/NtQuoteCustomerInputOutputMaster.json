@@ -1,0 +1,238 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180900"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "materialDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "materialId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "supplier",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "estAnnualVolume",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "estProductionRunYrs",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "materialCostLb",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "partWeightLb",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "runnerWeightLb",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "machineSize",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "machineRate",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "scrapRate",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "machineEfficiency",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "fte",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "laborRate",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "numberOfCavities",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cycleTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "purchaseComponentCostPart",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "secondaryOperationExternalProcess",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "secondaryOperationLaborRate",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "secondaryOperationMachineRate",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "secondaryOperationCycleTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "externalOperationRate",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "preventativeMaintenanceFrequency",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "preventativeMaintenanceCost",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "targetProfit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "targetMaterialMarkup",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "actualMaterialCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "partPerHours",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "estLotSize",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "setupHours",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "externalOperationCostPer",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "externalMachineCostPer",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "extendedLaborCostPer",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "extendedMaterialCostPer",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "packLogisticCostPer",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalProductionCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalMaterialCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalCostSgaProfit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "sgaRate",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "profit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "partPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalCost",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalSales",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalProfit",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "costMaterial",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalContributionMargin",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "contributionMargin",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "materialContributionMargin",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "name": "NtQuoteCustomerInputOutputMaster",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

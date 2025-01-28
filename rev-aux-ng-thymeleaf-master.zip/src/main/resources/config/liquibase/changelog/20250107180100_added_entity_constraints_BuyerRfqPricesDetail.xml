@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <!--
+        Added the constraints for entity BuyerRfqPricesDetail.
+    -->
+    <changeSet id="20250107180100-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="rfq_detail_id"
+                                 baseTableName="buyer_rfq_prices_detail"
+                                 constraintName="fk_buyer_rfq_prices_detail__rfq_detail_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="rfq_detail"
+                                 />
+
+        <addForeignKeyConstraint baseColumnNames="vendor_id"
+                                 baseTableName="buyer_rfq_prices_detail"
+                                 constraintName="fk_buyer_rfq_prices_detail__vendor_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vendor_profile"
+                                 />
+    </changeSet>
+</databaseChangeLog>

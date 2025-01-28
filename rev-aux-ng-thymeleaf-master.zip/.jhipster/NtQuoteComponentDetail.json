@@ -1,0 +1,104 @@
+{
+  "annotations": {
+    "changelogDate": "20250107180500"
+  },
+  "applications": ["RevAux"],
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "srNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "uid",
+      "fieldType": "UUID",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "materialDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "partNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "eau",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "manufacturingLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fobLocation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "packingRequirements",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "machineSize",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "cycleTime",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "partWeight",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "runnerWeight",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cavities",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "comments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "riskLevel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "updatedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "NtQuoteComponentDetail",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "ntQuote",
+      "relationshipName": "ntQuote",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "buyerRfqPricesDetail",
+      "relationshipName": "materialPrice",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
