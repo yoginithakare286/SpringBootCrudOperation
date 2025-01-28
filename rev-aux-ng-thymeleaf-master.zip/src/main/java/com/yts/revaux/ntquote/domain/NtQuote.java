@@ -13,7 +13,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
- * A NtQuote.
+ * A NtQuote entity.********
  */
 @Entity
 @Table(name = "nt_quote")
